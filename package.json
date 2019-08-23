@@ -2,8 +2,8 @@
   "name": "DM124-FrancineBraga",
   "private": true,
   "scripts": {
-    "start": "",
-    "start:dev": ""
+    "start": "node server",
+    "start:dev": "nodemon server"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
-    "@types/node": "^12.7.2"
+    "@types/node": "^12.7.2",
+    "nodemon": "^1.19.1"
   }
 }
