@@ -1,7 +1,8 @@
 const express = require('express');
+const checkAuth = require('../utils/checkauth')
 const router = express.Router();
 
-router.post('/', (request, response) => {
+router.post('/', checkAuth, (request, response) => {
  response.status(200).json({
    message: 'Handling POST requests to /orders'
  });
@@ -20,14 +21,14 @@ router.get('/:orderId', (request, response) => {
  });
 });
 
-router.patch('/:orderId', (request, response) => {
+router.patch('/:orderId', checkAuth, (request, response) => {
  const id = request.params.orderId;
  response.status(200).json({
    message: `Order with ID = ${id} was updated`
  });
 });
 
-router.delete('/:orderId', (request, response) => {
+router.delete('/:orderId', checkAuth, (request, response) => {
  const id = request.params.orderId;
  response.status(200).json({
    message: `Order with ID = ${id} was deleted`
