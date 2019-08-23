@@ -1,7 +1,11 @@
 const express = require('express');
-const app = express();
+const morgan = require('morgan');
 
-const orderRoutes = require('./api/routes/orders');
-app.use('/api/orders', orderRoutes);
+const app = express();
+app.use(morgan('dev'));
+app.use(express.json());
+
+app.use('/api/orders', require('./api/routes/orders'));
+app.use(require('./api/utils/notfound'));
 
 module.exports = app;
