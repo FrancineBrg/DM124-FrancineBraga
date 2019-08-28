@@ -5,7 +5,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 
-app.use('/api/orders', require('./api/routes/orders'));
+app.use('/api/deliveries', require('./api/routes/deliveries'));
 app.use(require('./api/utils/notfound'));
 
 module.exports = app;
