@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Create order",
+			"name": "Create delivery",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -34,10 +34,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"orderId\": 1,\n    \"customerId\": 1,\n    \"receiverName\": \"Daniel\",\n    \"receiverCpf\": \"12345678900\",\n    \"isBuyer\": false,\n    \"dateTimeDelivery\": \"2019-08-23\",\n    \"local\": \"SRS\"\n}"
+					"raw": "{\n\t\"orderId\": 1,\n    \"customerId\": 1,\n    \"receiverName\": \"Daniel\",\n    \"receiverCpf\": \"12345678900\",\n    \"isBuyer\": false,\n    \"dateTime\": \"2019-08-23\",\n    \"local\": \"SRS\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/orders",
+					"raw": "http://localhost:8080/api/deliveries",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -45,14 +45,14 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"orders"
+						"deliveries"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Get orders",
+			"name": "Get deliveries",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -86,7 +86,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/orders",
+					"raw": "http://localhost:8080/api/deliveries",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -94,14 +94,14 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"orders"
+						"deliveries"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Get order by id",
+			"name": "Get delivery by id",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -135,7 +135,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/orders/1",
+					"raw": "http://localhost:8080/api/deliveries/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -143,7 +143,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"orders",
+						"deliveries",
 						"1"
 					]
 				}
@@ -151,7 +151,7 @@
 			"response": []
 		},
 		{
-			"name": "Update order by id",
+			"name": "Update delivery by id",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -179,10 +179,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"orderId\": 1,\r\n        \"customerId\": 1,\r\n        \"receiverName\": \"Daniel\",\r\n        \"receiverCpf\": \"12345678900\",\r\n        \"isBuyer\": true,\r\n        \"dateTimeDelivery\": \"2019-08-23\",\r\n        \"local\": \"SRS\"\r\n    }"
+					"raw": "{\r\n        \"orderId\": 1,\r\n        \"customerId\": 1,\r\n        \"receiverName\": \"Daniel\",\r\n        \"receiverCpf\": \"12345678900\",\r\n        \"isBuyer\": true,\r\n        \"dateTime\": \"2019-08-23\",\r\n        \"local\": \"SRS\"\r\n    }"
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/orders/1",
+					"raw": "http://localhost:8080/api/deliveries/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -190,7 +190,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"orders",
+						"deliveries",
 						"1"
 					]
 				}
@@ -198,7 +198,7 @@
 			"response": []
 		},
 		{
-			"name": "Delete order by id",
+			"name": "Delete delivery by id",
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -229,7 +229,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/orders/1",
+					"raw": "http://localhost:8080/api/deliveries/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -237,7 +237,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"orders",
+						"deliveries",
 						"1"
 					]
 				}

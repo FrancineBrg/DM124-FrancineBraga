@@ -35,7 +35,7 @@ router.get('/', (request, response) => {
 router.get('/:deliveryId', (request, response) => {
   const delivery = db[request.params.deliveryId];
   delivery
-  ? response.json(order)
+  ? response.json(delivery)
   : notFound(request, response)
 });
 
