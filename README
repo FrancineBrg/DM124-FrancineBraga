@@ -1,1 +1,7 @@
+Final project to DM124
 
+How run the project:
+
+ - run the file server.js
+
+In Postman, execute the collection "DM124 Final homework.postman_collection.json".
